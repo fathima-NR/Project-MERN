@@ -2,11 +2,9 @@ import React from 'react';
 import OrderSuccessModal from './OrderSuccessModal';
 import Navbar from '../component/Navbar';
 
-function Checkout({ total,CartProduct }) {
+function Checkout({ total, CartProduct }) {
 
-
-console.log(CartProduct);
-
+  console.log(CartProduct);
 
   return (
     <>
@@ -129,17 +127,16 @@ console.log(CartProduct);
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td className="fw-bold">Heart Velvet Cake</td>
-                    <td>₹2998</td>
-                  </tr>
-                 
-                
+                  {CartProduct.map((product, index) => (
+                    <tr key={index}>
+                      <td className="fw-bold">{product.Name}</td>
+                      <td  className="fw-bold">{product.price}/-</td>
+                    </tr>
+                  ))}
                   <tr>
                     <td className="fw-bold">Total</td>
-                    <td>{total}</td>
+                    <td  className="fw-bold">{total}/-</td>
                   </tr>
-                 
                 </tbody>
               </table>
             </div>
@@ -150,20 +147,15 @@ console.log(CartProduct);
             </div>
             <div className="card-body">
               <form>
-                <div className="form-check">
-                  <input className="form-check-input" type="radio" name="paymentMethod" id="onlinePayment" defaultValue="online" required />
-                  <label className="form-check-label fw-bold" htmlFor="onlinePayment">
-                    Online Payment
-                  </label>
-                </div>
-                <div className="form-check mt-3">
+               
+                <div className="form-check ">
                   <input className="form-check-input" type="radio" name="paymentMethod" id="cod" defaultValue="cod" required />
                   <label className="form-check-label fw-bold" htmlFor="cod">
                     Cash on Delivery (COD)
                   </label>
                 </div>
               </form>
-              <h6 className="mt-2 fw-bold">Pay via UPI, Net Banking, Debit Card, Credit Card and Wallets</h6>
+              <h6 className="mt-4 fw-bold">Pay via UPI, Net Banking, Debit Card, Credit Card and Wallets</h6>
               <p className="mt-2">
                 Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <br />{' '}
                 <a href="">privacy policy</a>

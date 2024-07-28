@@ -20,8 +20,8 @@ function Navbar() {
   <button className="btn-nav  mt-2 fs-5 ms-3  searchbar "><FaSearch /></button>
 
 
-       
-       <button className="btn-nav mt-2 fs-5 ms-3  cart "><FaShoppingCart /></button>
+       <Link to ="/cart">
+       <button className="btn-nav mt-2 fs-5 ms-3  cart "><FaShoppingCart /></button></Link>
   </div>
     <button  className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" style={{ background: 'none', border: 'none',marginRight:20,marginBottom:5 }}>
     <TiThMenu className='menubtn' />
@@ -63,16 +63,28 @@ function Navbar() {
     
      
      <div className="modal-content">
-  <div className="modal-header">
-    <button type="button" className="close" data-bs-dismiss="modal">×</button>
-    <h4 className="modal-title">Modal Header</h4>
+ <div>
+  <div className="modal-header ">
+    <h3 className="modal-title d-flex justify-content-center w-100 fw-bold fs- "  id="signInModalLabel" style={{color:'#6C0345'}}>Sign In</h3>
+
+  
+   
   </div>
   <div className="modal-body">
-    <p>Some text in the modal.</p>
+    <form>
+      <div className="form-group">
+        <label htmlFor="signInEmail" className='fw-bold'>Email address</label>
+        <input type="email" className="form-control mt-2" id="signInEmail" placeholder="Enter email" />
+      </div>
+      <div className="form-group mt-3">
+        <label htmlFor="signInPassword"className='fw-bold'>Password</label>
+        <input type="password" className="form-control mt-2" id="signInPassword" placeholder="Password" />
+      </div>
+      <button type="submit" className="btn btn-block w-100 mt-4 text-light fw-bold fs-6" style={{backgroundColor:'#6C0345'}}>Sign In</button>
+    </form>
   </div>
-  <div className="modal-footer">
-    <button type="button" className="btn btn-default" data-bs-dismiss="modal">Close</button>
-  </div>
+</div>
+
 </div>
 
       

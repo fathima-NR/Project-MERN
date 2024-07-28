@@ -10,12 +10,13 @@ export const Cart = ({Total, CartProduct}) => {
   const [cakeInfo, setCakeInfo] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
+  CartProduct(cakeInfo)
 
   useEffect(() => {
     axios.get("http://localhost:8000/Cart")
       .then((res) => {
         setCakeInfo(res.data);
-        CartProduct(res.data); // Call CartProduct after data is fetched
+         // Call CartProduct after data is fetched
       })
       .catch((e) => {
         console.log("Error To Fetch Cart Data!", e);
@@ -28,7 +29,7 @@ export const Cart = ({Total, CartProduct}) => {
     axios.get("http://localhost:8000/Cart")
       .then((res) => {
         setCakeInfo(res.data);
-        CartProduct(res.data); // Call CartProduct after data is fetched
+        // Call CartProduct after data is fetched
       })
       .catch((e) => {
         console.log("Error To Fetch Cart Data!", e);
@@ -73,8 +74,8 @@ export const Cart = ({Total, CartProduct}) => {
             </div>
             {cakeInfo.map((cd, index) => (
               <div className="card mt-2 border-0" key={index}>
-                <div className="row">
-                  <div className="col-lg-3 m-3">
+                <div className="row ">
+                  <div className="col-lg-3  m-3">
                     <img src={cd.Imgurl} alt="Cake" className='img-fluid' />
                   </div>
                   <div className="col-lg-5 mt-4">

@@ -70,38 +70,12 @@ font-size: 17px;
   .searchbar {
     position:absolute;
     top: 11px;
-    right: 110px;
+    right: 100px;
   }
   .cart{
     position: absolute;
     top: 11px;
-    right: 76px;
+    right: 65px;
   }
   /* other styles specific for screens <= 576px */
-}
-.search-container {
-  display: flex;
-  align-items: center;
-  max-width: 200px;
-  transition: max-width 0.4s ease-in-out;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-}
-
-.search-input {
-  flex-grow: 1;
-  width: 0;
-  padding: 0;
-  transition: width 0.4s ease-in-out, padding 0.4s ease-in-out;
-  border: none;
-  outline: none;
-}
-
-.search-container:focus-within {
-  max-width: 100%;
-}
-
-.search-container:focus-within .search-input {
-  width: 100%;
-  padding: .375rem .75rem;
 }

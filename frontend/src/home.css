@@ -48,3 +48,12 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     transform: scale(1.1);
  
   }
+
+  @media screen and (max-width: 576px) {
+    .card1 {
+        /* Card size for small devices */
+        width: 65%; /* Adjust as needed */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,38 +1,38 @@
 import React from 'react'
 import Navbar from './component/Navbar'
 import "../src/home.css"
-
+import { Link } from 'react-router-dom'
 import Childcomponent from './about/Childcomponent';
 import CardRow from './CardRow';
 
 function Home() {
- let cakecard = [
-{
-cakeimg: 'https://flowera.in/uploads/tempDir/dessscM_06_6662e686bf80b-350X400.jpg',
-cakename:'DESIGNER CAKES'
-},
-{
-  cakeimg: 'https://flowera.in/uploads/tempDir/rassscM_06_6662dd87a8be5-350X400.jpg',
-  cakename:'RASAMALAI CAKES'
-  },
-{
-  cakeimg: 'https://flowera.in/uploads/tempDir/birsscM_06_6662de2704c15-350X400.jpg',
-  cakename:'BIRTHDAY CAKES'
-    },
-{
-  cakeimg: 'https://flowera.in/uploads/tempDir/annsscM_06_6662ea35cf21e-350X400.jpeg',
-  cakename:'ANNIVERSARY CAKES'
-      },
-{
-  cakeimg: 'https://flowera.in/uploads/tempDir/chosscM_06_6662f255c8cb6-350X400.jpg',
-  cakename:'CHOCOLATE TRUFFLE'
-      },
-      {
-        cakeimg: 'https://flowera.in/uploads/tempDir/rassscM_06_6662dd87a8be5-350X400.jpg',
-        cakename:'RASAMALAI CAKES'
-        }
-]
-console.log(cakecard);
+//  let cakecard = [
+// {
+// cakeimg: 'https://flowera.in/uploads/tempDir/dessscM_06_6662e686bf80b-350X400.jpg',
+// cakename:'DESIGNER CAKES'
+// },
+// {
+//   cakeimg: 'https://flowera.in/uploads/tempDir/rassscM_06_6662dd87a8be5-350X400.jpg',
+//   cakename:'RASAMALAI CAKES'
+//   },
+// {
+//   cakeimg: 'https://flowera.in/uploads/tempDir/birsscM_06_6662de2704c15-350X400.jpg',
+//   cakename:'BIRTHDAY CAKES'
+//     },
+// {
+//   cakeimg: 'https://flowera.in/uploads/tempDir/annsscM_06_6662ea35cf21e-350X400.jpeg',
+//   cakename:'ANNIVERSARY CAKES'
+//       },
+// {
+//   cakeimg: 'https://flowera.in/uploads/tempDir/chosscM_06_6662f255c8cb6-350X400.jpg',
+//   cakename:'CHOCOLATE TRUFFLE'
+//       },
+//       {
+//         cakeimg: 'https://flowera.in/uploads/tempDir/rassscM_06_6662dd87a8be5-350X400.jpg',
+//         cakename:'RASAMALAI CAKES'
+//         }
+// ]
+// console.log(cakecard);
   return (
     <>
     <Navbar/>
@@ -41,19 +41,61 @@ console.log(cakecard);
    </div>
    
    <div style={{backgroundColor:'#fff0f7'}}>
-   <div className="container mt-5 " >
+   <div className="container " >
     <h3 className='text-center fw-bold p-4' style={{color:'#6C0345'}}>Best selling Cakes</h3>
-  <div className="row">
-    {cakecard.map((cake, index) => (
-      <div key={index} className="col-xl-2 col-lg-4 col-md-6 col-sm-6 mb-4">
+  <div className="row align-items-center justify-content-center">
+   
+      <div className="col-xl-2 col-lg-4 col-md-4 col-sm-4 mb-4">
+        <Link to="/Cake1" className='text-decoration-none' >
         <div className="card card1 mt-3">
-          <img className="card-img-top cakeimg-home" src={cake.cakeimg} alt="Cake" />
+          <img className="card-img-top img-fluid cakeimg-home" src="https://flowera.in/uploads/tempDir/rassscM_06_6662dd87a8be5-350X400.jpg" alt="Cake" />
           <div className="card-body">
-            <h6 className="card-title text-center "style={{fontSize:12,fontWeight:900}} >{cake.cakename}</h6>
+            <h6 className="card-title text-center "style={{fontSize:14,fontWeight:900}} >Rasamalai Cake</h6>
           </div>
         </div>
+        </Link>
       </div>
-    ))}
+      <div className="col-xl-2 col-lg-4 col-md-4 col-sm-4 mb-4">
+      <Link to="/Homeproduct" className='text-decoration-none' >
+        <div className="card card1 mt-3">
+          <img className="card-img-top img-fluid cakeimg-home" src="https://flowera.in/uploads/tempDir/dessscM_06_6662e686bf80b-350X400.jpg" alt="Cake" />
+          <div className="card-body">
+            <h6 className="card-title text-center "style={{fontSize:14,fontWeight:900}} >Designer Cake</h6>
+          </div>
+        </div>
+        </Link>
+      </div>
+      <div className="col-xl-2 col-lg-4 col-md-4 col-sm-4 mb-4">
+      <Link to="/Homeproduct" className='text-decoration-none' >
+        <div className="card card1 mt-3">
+          <img className="card-img-top img-fluid cakeimg-home" src="https://flowera.in/uploads/tempDir/dessscM_06_6662e686bf80b-350X400.jpg" alt="Cake" />
+          <div className="card-body">
+            <h6 className="card-title text-center "style={{fontSize:14,fontWeight:900}} >Designer Cake</h6>
+          </div>
+        </div>
+        </Link>
+      </div>
+      <div className="col-xl-2 col-lg-4 col-md-4 col-sm-4 mb-4">
+      <Link to="/Homeproduct" className='text-decoration-none' >
+        <div className="card card1 mt-3">
+          <img className="card-img-top img-fluid cakeimg-home" src="https://flowera.in/uploads/tempDir/dessscM_06_6662e686bf80b-350X400.jpg" alt="Cake" />
+          <div className="card-body">
+            <h6 className="card-title text-center "style={{fontSize:14,fontWeight:900}} >Designer Cake</h6>
+          </div>
+        </div>
+        </Link>
+      </div>
+      <div className="col-xl-2 col-lg-4 col-md-4 col-sm-4 mb-4">
+      <Link to="/Homeproduct" className='text-decoration-none' >
+        <div className="card card1 mt-3">
+          <img className="card-img-top img-fluid cakeimg-home" src="https://flowera.in/uploads/tempDir/dessscM_06_6662e686bf80b-350X400.jpg" alt="Cake" />
+          <div className="card-body">
+            <h6 className="card-title text-center "style={{fontSize:14,fontWeight:900}} >Designer Cake</h6>
+          </div>
+        </div>
+        </Link>
+      </div>
+   
   </div>
 </div>
 </div>

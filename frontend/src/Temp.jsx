@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Home1';
 import CakeForm from './CakeForm';
@@ -13,14 +13,13 @@ import { SingleProduct } from './component/SingleProduct';
 import { Cart } from './component/Cart';
 import Checkout from './component/Checkout';
 import ASCF from './ASCF';
+import Cake1 from "../src/Homeproducts/Cake1"
 
 export const Temp = () => {
   const [total, setTotal] = useState(0);
   const [CartData, setCartData] = useState([]);
 
-  console.log(CartData);
-
-  const updateTotal = (newTotal) => {
+  const Total = (newTotal) => {
     setTotal(newTotal);
   };
 
@@ -28,16 +27,14 @@ export const Temp = () => {
     setCartData(CartD);
   };
 
-  
+  useEffect(() => {
+    if (CartData && CartData.length > 0) {
+      CartData.forEach(({ Name }) => console.log("name", Name));
+    }
+  }, [CartData]);
 
-
-
-
-
-
-
-
-
+  console.log(total);
+  console.log(CartData);
 
   return (
     <>
@@ -45,13 +42,14 @@ export const Temp = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
+          <Route path="/Cake1" element={<Cake1 />}/>
           <Route path="/CF" element={<CakeForm />} />
           <Route path="/About" element={<About />} />
           <Route path="/Product" element={<Product />} />
           <Route path="/Contactus" element={<ContactForm />} />
           <Route path="/Dp/:category" element={<DetaileProd />} />
           <Route path="/SingleProduct/:id" element={<SingleProduct />} />
-          <Route path="/Cart" element={<Cart Total={updateTotal}  />} />
+          <Route path="/Cart" element={<Cart Total={Total} CartProduct={CartProduct} />} />
           <Route path="/checkout" element={<Checkout total={total} CartProduct={CartData}/>} />
           <Route path="/Dp/:category/ASCF" element={<ASCF />} />
           <Route path="/Specialitycake" element={<Specialitycake />} />

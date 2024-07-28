@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CF from "../src/CakeForm.module.css";
 import axios from "axios";
+import Navbar from './component/Navbar';
 
 const ASCF = () => {
   // State variables for each form field
@@ -48,6 +49,8 @@ axios.post("http://localhost:8000/AddProduct/Subcategory",formData)
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="container mt-4" style={{ backgroundColor: 'pink' }}>
       <h2 className="mb-4" style={{ color: 'palevioletred' }}>Cake Information Form</h2>
       <form onSubmit={handleSubmit}>
@@ -143,6 +146,7 @@ axios.post("http://localhost:8000/AddProduct/Subcategory",formData)
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
     </div>
+    </>
   );
 };
 
