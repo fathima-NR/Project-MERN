@@ -25,15 +25,20 @@ export const DetaileProd = () => {
 
   return (
     <>
+
+
+   
+    
  <Navbar/>
-      <div className='mt-3'>
+      <div className='mt-3 '>
         {Data && Data.length > 0 ? (
           <ul style={{ display: "flex", flexWrap: "wrap" }}>
+            
             {Data.map((TD) => (
-              <li key={TD.id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6 ">
+              <li key={TD.id} className="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                 <Link to={`/SingleProduct/${TD._id}`} style={{ textDecoration: "none" }}>
                   <div className="card mt-5" style={{ width: '15rem' }}>
-                    <img src={TD.ImgUrl} className="card-img-top" alt="Placeholder Image" />
+                    <img src={TD.ImgUrl} className="card-img-top img-fluid" alt="Placeholder Image" />
                     <div className="card-body">
                       <h5 className="card-title">{TD.CakeName}</h5>
                       <p className="card-text"><FaRupeeSign />{TD.Price}/-  <span className='ms-5 fs-4 text-white bg-black p-1' style={{ borderRadius: 10 }}><FaShoppingCart /></span></p>
@@ -44,7 +49,9 @@ export const DetaileProd = () => {
                 </Link>
               </li>
             ))}
+           
           </ul>
+
         ) : (
           <p>Loading...</p>
         )}

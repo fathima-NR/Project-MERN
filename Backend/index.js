@@ -29,6 +29,7 @@ const Card = require("./Controllers/Card");
 const GetCart = require("./Controllers/GetCart");
 const DeleteCard = require("./Controllers/DeleteCard");
 const ASC = require("./Controllers/ASC");
+const OrderDetails=require("./Controllers/OrderDetails")
 
 
 
@@ -43,6 +44,7 @@ App.post("/Addtocart",Card)
 App.get("/Cart",GetCart);
 App.delete("/deletecard",DeleteCard)
 App.post("/AddProduct/Subcategory",ASC)
+App.post("/orderdetails",OrderDetails)
 
 
 // Start Server

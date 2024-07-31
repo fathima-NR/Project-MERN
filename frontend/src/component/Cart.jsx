@@ -6,17 +6,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Modal, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-export const Cart = ({Total, CartProduct}) => {
+export const Cart = ({ Total, CartProduct }) => {
   const [cakeInfo, setCakeInfo] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [modalMessage, setModalMessage] = useState('');
-  CartProduct(cakeInfo)
+  CartProduct(cakeInfo);
 
   useEffect(() => {
     axios.get("http://localhost:8000/Cart")
       .then((res) => {
         setCakeInfo(res.data);
-         // Call CartProduct after data is fetched
+        // Call CartProduct after data is fetched
       })
       .catch((e) => {
         console.log("Error To Fetch Cart Data!", e);
@@ -61,11 +61,52 @@ export const Cart = ({Total, CartProduct}) => {
 
   return (
     <>
+      <style>
+        {`
+          @media (max-width: 766px) {
+          .imgc{
+          width:120px;
+          height:100px;
+          display:flex;
+          justify-content-center;
+           }
+            .N1{
+            font-size:13px
+            
+            }
+              .P1{
+            font-size:13px
+            
+            }
+              .CN1{
+            font-size:13px
+            
+            }
+              .DY{
+            font-size:13px
+            
+            }
+              .SM{
+            font-size:13px
+            
+            }  .TS{
+            font-size:13px
+            
+            }
+          
+          
+          
+          }`
+          
+          
+          }
+          
+      </style>
       <Navbar />
       <div style={{ backgroundColor: '#F6F5F5' }}>
-        <div className="row ms-1">
+        <div className="row d-flex justify-content-center">
           <div className="col-lg-7">
-            <div className="card mt-3 border-0">
+            <div className="card mt-3  m-2 border-0">
               <div className="body">
                 <div className="card-title text-center fs-3 p-3 fw-bold ">
                   Shopping Cart
@@ -73,20 +114,20 @@ export const Cart = ({Total, CartProduct}) => {
               </div>
             </div>
             {cakeInfo.map((cd, index) => (
-              <div className="card mt-2 border-0" key={index}>
-                <div className="row ">
-                  <div className="col-lg-3  m-3">
+              <div className="card mt-2 border-0 m-2" key={index}>
+                <div className="row">
+                  <div className="col-2 col-sm-4 col-md-3 ms-3 mt-4 imgc">
                     <img src={cd.Imgurl} alt="Cake" className='img-fluid' />
                   </div>
-                  <div className="col-lg-5 mt-4">
-                    <h6 className='fw-bold'>{cd.Name}</h6>
-                    <h6 className='fw-bold'>{cd.price}/-  {cd.weight}kg </h6>
-                    <h6 className='fw-bold'>Name On Cake:<span className='fw-normal'>{cd.cakeName} </span></h6>
-                    <h6 className='fw-bold'>Delivery: <span className='fw-normal'>{cd.deliveryDate}</span></h6>
-                    <h6 className='fw-bold'>Shipping Method <span className='fw-normal'>{cd.shippingMethod}</span></h6>
-                    <h6 className='fw-bold'>Time: <span className='fw-normal'>{cd.timeSlot}</span></h6>
+                  <div className="col-6 col-sm-8 col-md-5 mt-4 ">
+                    <h6 className='fw-bold N1'>{cd.Name}</h6>
+                    <h6 className='fw-bold P1'>{cd.price}/-  {cd.weight}kg </h6>
+                    <h6 className='fw-bold CN1'>Name On Cake: <span className='fw-normal'>{cd.cakeName}</span></h6>
+                    <h6 className='fw-bold DY'>Delivery: <span className='fw-normal'>{cd.deliveryDate}</span></h6>
+                    <h6 className='fw-bold SM'>Shipping Method: <span className='fw-normal'>{cd.shippingMethod}</span></h6>
+                    <h6 className='fw-bold TS'>Time: <span className='fw-normal'>{cd.timeSlot}</span></h6>
                   </div>
-                  <div className="col-lg-3 mt-3 ms-3" >
+                  <div className="col-1 col-sm-1 mt-3 ms-3 " >
                     <MdDelete onClick={() => DeleteCart(cd._id)} />
                   </div>
                 </div>
@@ -95,7 +136,7 @@ export const Cart = ({Total, CartProduct}) => {
             ))}
           </div>
           <div className="col-lg-4 mt-3">
-            <div className="card border-0">
+            <div className="card  m-2 border-0">
               <div className="card-body">
                 <form action="">
                   <div>
@@ -107,26 +148,27 @@ export const Cart = ({Total, CartProduct}) => {
               </div>
             </div>
             <div>
-              <div className="card mt-3 border-0">
+              <div className="card    m-2 border-0">
                 <div className="card-title">
                   <h3 className='text-start p-2 ms-3 fw-bold' style={{ color: '#6C0345' }}>Summary</h3>
                   <div className="card-body ms-2">
                     <h6>Subtotal: {totalPrice}/-</h6>
                     <h6>Total: {totalPrice}/-</h6>
                     <form action="">
-                     <Link  to="/checkout" className='text-decoration-none'>
-                     <button className='btn btn-warning btn-lg fw-bold fs-6 p-2 mt-3 rounded-3 d-block mx-auto w-100' type="submit">
+                      <Link to="/checkout" className='text-decoration-none'>
+                        <button className='btn btn-warning btn-lg fw-bold fs-6 p-2 mt-3 rounded-3 d-block mx-auto w-100' type="submit">
                           CHECK OUT
                         </button>
-                     </Link>
+                      </Link>
                     </form>
                   </div>
                 </div>
               </div>
-              <div className="card mt-4 border-0">
+              <div className="card m-2 border-0">
                 <div className="card-body">
                   <h5 className='fw-bold'>Pay With</h5>
                 </div>
+                <img className='ms-5' src="https://www.shutterstock.com/image-vector/kerala-india-may-08-2023-260nw-2304421791.jpg" alt="" style={{width:150}}/>
                 <hr />
                 <p className='text-muted p-3'>Get full support if the item is not as described or if it is not delivered</p>
               </div>

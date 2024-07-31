@@ -14,7 +14,10 @@ import { Cart } from './component/Cart';
 import Checkout from './component/Checkout';
 import ASCF from './ASCF';
 import Cake1 from "../src/Homeproducts/Cake1"
-
+import Cake2 from "../src/Homeproducts/Cake2"
+import Cake3 from "../src/Homeproducts/Cake3"
+import Cake4 from "../src/Homeproducts/Cake4"
+import Cake5 from "../src/Homeproducts/Cake5"
 export const Temp = () => {
   const [total, setTotal] = useState(0);
   const [CartData, setCartData] = useState([]);
@@ -43,6 +46,10 @@ export const Temp = () => {
           <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Cake1" element={<Cake1 />}/>
+          <Route path="/Cake2" element={<Cake2 />}/>
+          <Route path="/Cake3" element={<Cake3 />}/>
+          <Route path="/Cake4" element={<Cake4 />}/>
+          <Route path="/Cake5" element={<Cake5 />}/>
           <Route path="/CF" element={<CakeForm />} />
           <Route path="/About" element={<About />} />
           <Route path="/Product" element={<Product />} />

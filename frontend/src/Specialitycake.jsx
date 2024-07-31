@@ -4,61 +4,61 @@ function Specialitycake() {
 
   let Scake = [
 {
-cakeimg:'https://cdn.shopify.com/s/files/1/0521/3929/4884/files/AfterNineCake2Large.jpg',
+cakeimg:'https://raw.githubusercontent.com/fathima-NR/Project-MERN/assets/AfterNineCake2Large.webp',
 cakename:'After Nine Cake'
 
 },{
-cakeimg:'https://cdn.shopify.com/s/files/1/0521/3929/4884/files/Chocolate_Nougatine_Cake_3_Large_6b24a6e7-df97-44cb-bd7f-8875ca6b9c31.jpg?v=1700906862',
+cakeimg:'https://raw.githubusercontent.com/fathima-NR/Project-MERN/assets/Chocolate_Nougatine_Cake_3_Large_6b24a6e7-df97-44cb-bd7f-8875ca6b9c31.webp',
 cakename:'Almond Nougatine Cake'
 
 },
 {
-cakeimg:'https://cdn.shopify.com/s/files/1/0521/3929/4884/files/Cappuccino_Cake_3_Large_29fb614e-7145-4c47-9eeb-9eeab5cd8cc9.jpg?v=1699615115',
+cakeimg:'https://raw.githubusercontent.com/fathima-NR/Project-MERN/assets/Cappuccino_Cake_3_Large_29fb614e-7145-4c47-9eeb-9eeab5cd8cc9.webp',
 cakename:'Cappuccino Cake'
 
 },
 {
-  cakeimg:'https://cdn.shopify.com/s/files/1/0521/3929/4884/files/CarrotCake3Large.jpg?v=1702989501',
+  cakeimg:'https://raw.githubusercontent.com/fathima-NR/Project-MERN/assets/CarrotCake3Large.webp',
   cakename:'Carrot Cake'
   
   },
   {
-    cakeimg:'https://cdn.shopify.com/s/files/1/0521/3929/4884/files/ChocolatemousseCake3Large.jpg?v=1702989535',
+    cakeimg:'https://raw.githubusercontent.com/fathima-NR/Project-MERN/assets/ChocolatemousseCake3Large.webp',
     cakename:'Chocolate Mousse Cake'
     
     },
     {
-      cakeimg:'https://cdn.shopify.com/s/files/1/0521/3929/4884/files/Chocolate_Oreo_Cake_2_Large_c4138f7d-1958-44d2-a1a2-77053aaef51b.jpg?v=1708327547',
+      cakeimg:'https://raw.githubusercontent.com/fathima-NR/Project-MERN/assets/Chocolate_Oreo_Cake_2_Large_c4138f7d-1958-44d2-a1a2-77053aaef51b.webp',
       cakename:'Chocolate Oreo Cake'
       
       },
       {
-        cakeimg:'https://cdn.shopify.com/s/files/1/0521/3929/4884/files/Dense_Loaf_Truffle_Cake_2_Large_75eb11a2-2fb6-4468-a706-187a01ebeef2.jpg',
+        cakeimg:'https://raw.githubusercontent.com/fathima-NR/Project-MERN/assets/Dense_Loaf_Truffle_Cake_2_Large_75eb11a2-2fb6-4468-a706-187a01ebeef2.webp',
         cakename:'Dense Loaf Truffle Cake'
         
         },
         {
-          cakeimg:'https://cdn.shopify.com/s/files/1/0521/3929/4884/files/Freshfruitandcreamcake1.jpg',
+          cakeimg:'https://raw.githubusercontent.com/fathima-NR/Project-MERN/assets/Freshfruitandcreamcake1.webp',
           cakename:'Fresh Fruit & Cream Cake'
           
           },
           {
-            cakeimg:'https://cdn.shopify.com/s/files/1/0521/3929/4884/files/Lemon_mountain_Cake_1_Large_9b7a4b19-1ee3-4d24-995c-a0be99f5f4d4.jpg?v=1699615976',
+            cakeimg:'https://raw.githubusercontent.com/fathima-NR/Project-MERN/assets/Lemon_mountain_Cake_1_Large_9b7a4b19-1ee3-4d24-995c-a0be99f5f4d4.webp',
             cakename:'Lemon Mountain Cake'
             
             },
             {
-              cakeimg:'https://cdn.shopify.com/s/files/1/0521/3929/4884/files/NYBakedCheeseCake2Large.jpg?v=1702540705',
+              cakeimg:'https://raw.githubusercontent.com/fathima-NR/Project-MERN/assets/NYBakedCheeseCake2Large.webp',
               cakename:'New York Style Baked Cheesecake'
               
               },
               {
-                cakeimg:'https://cdn.shopify.com/s/files/1/0521/3929/4884/files/Opera_Cake_2_Large_1f547d58-0b32-4840-91d5-488cd09abc96.jpg',
+                cakeimg:'https://raw.githubusercontent.com/fathima-NR/Project-MERN/assets/Opera_Cake_2_Large_1f547d58-0b32-4840-91d5-488cd09abc96.webp',
                 cakename:'Opera Cake'
                 
                 },
                 {
-                  cakeimg:'https://cdn.shopify.com/s/files/1/0521/3929/4884/files/Tiramisu_Cake_1_Large_0387576f-5fdf-4ff8-bb91-cf5138ec8b6f.jpg?v=1700907098',
+                  cakeimg:'https://raw.githubusercontent.com/fathima-NR/Project-MERN/assets/Tiramisu_Cake_1_Large_0387576f-5fdf-4ff8-bb91-cf5138ec8b6f.webp',
                   cakename:'Tiramisu Cake'
                   
                 }

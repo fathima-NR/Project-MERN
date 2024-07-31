@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { CiStar } from "react-icons/ci";
 import { FaStar, FaRupeeSign } from "react-icons/fa";
 import Navbar from './Navbar';
+import { Link } from 'react-router-dom'
 
 
 export const SingleProduct = () => {
@@ -65,9 +66,9 @@ export const SingleProduct = () => {
   <>
   <Navbar/>
     <div className="container mt-3">
-      <div className="row">
+      <div className="row ">
         <div className="col-lg-6">
-          <img src={product.ImgUrl} className="img-fluid" alt="Product" width={700} style={{position:'sticky',top:10}}/>
+          <img src={product.ImgUrl} className="img-fluid" alt="Product" width={700} style={{position:'sticky',top:"10px"}}/>
          <p className='text-muted'>Disclaimer: Image is for representation only. Actual product design and icing may vary based on local availability.</p>
           </div>
           
@@ -90,21 +91,21 @@ export const SingleProduct = () => {
                 </div>
               </div>
               <div className='border border-muted mt-4 p-3' style={{ borderRadius: 5 }}>
-                <input type="text" className="form-control mt-2" id="cake-name" name="cake-name" value={cakeName} onChange={(e) => setCakeName(e.target.value)} placeholder="Name On The Cake" />
+                <input type="text" className="form-control mt-2" id="cake-name" name="cake-name" value={cakeName} onChange={(e) => setCakeName(e.target.value)} placeholder="Name On The Cake" required />
               </div>
               <div className='border border-muted mt-4 p-3'>
                 <div className="row g-3">
                   <div className="col-md-6">
-                    <input type="text" className="form-control" id="delivery-pincode" name="delivery-pincode" value={deliveryPincode} onChange={(e) => setDeliveryPincode(e.target.value)} placeholder="Enter Delivery Pincode" />
+                    <input type="text" className="form-control" id="delivery-pincode" name="delivery-pincode" value={deliveryPincode} onChange={(e) => setDeliveryPincode(e.target.value)} placeholder="Enter Delivery Pincode" required/>
                   </div>
                   <div className="col-md-6">
                     <div className="input-group">
-                      <input type="date" className="form-control" id="delivery-date" name="delivery-date" value={deliveryDate} onChange={(e) => setDeliveryDate(e.target.value)} placeholder="Select Delivery Date" aria-describedby="calendar-icon" />
+                      <input type="date" className="form-control" id="delivery-date" name="delivery-date" value={deliveryDate} onChange={(e) => setDeliveryDate(e.target.value)} placeholder="Select Delivery Date" aria-describedby="calendar-icon" required />
                       
                     </div>
                   </div>
                   <div className="col-md-6">
-                    <select className="form-select" id="shipping-method" name="shipping-method" value={shippingMethod} onChange={(e) => setShippingMethod(e.target.value)}>
+                    <select className="form-select" id="shipping-method" name="shipping-method"  value={shippingMethod} onChange={(e) => setShippingMethod(e.target.value)}placeholder="Shipping method"  required >
                       <option value="standard">Free Delivery</option>
                       <option value="express">Fixed Time Delivery (Rs.45/-)</option>
                       <option value="same-day">Mid Night Delivery (Rs.199/-)</option>
@@ -119,9 +120,12 @@ export const SingleProduct = () => {
                   </div>
                 </div>
                 <div className="mt-4">
+                 
                   <button className='btn btn-warning btn-lg fw-bold fs-5 p-2 d-block mx-auto w-100' type="submit">
                     Add To Cart
                   </button>
+                  
+                  
                 </div>
               </div>
             </form>
@@ -143,7 +147,7 @@ export const SingleProduct = () => {
       {/* refunt botton */}
 
    <div className="mt-4">
-  <button className="btn btn-warning mx-auto d-block w-25 ">Refund &amp; Delivery Policy</button>
+  <button className="btn btn-warning mx-auto w-40 d-flex justify-content-center fw-bold ">Refund &amp; Delivery Policy</button>
 </div>
 <hr />
 {/* description for refund */}

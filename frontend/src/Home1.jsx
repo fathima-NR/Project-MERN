@@ -37,7 +37,7 @@ function Home() {
     <>
     <Navbar/>
       <div className='home'>
-    <img src="https://flowera.in/uploads/tempDir/BannerImg_06_1719231380-1913X692.jpg" alt=""  className='img-fluid homeimg'/>
+    <img src="https://raw.githubusercontent.com/fathima-NR/Project-MERN/assets/BannerImg_06_1719231380-1913X692.webp" alt=""  className='img-fluid homeimg'/>
    </div>
    
    <div style={{backgroundColor:'#fff0f7'}}>
@@ -56,9 +56,29 @@ function Home() {
         </Link>
       </div>
       <div className="col-xl-2 col-lg-4 col-md-4 col-sm-4 mb-4">
-      <Link to="/Homeproduct" className='text-decoration-none' >
+      <Link to="/Cake2" className='text-decoration-none' >
         <div className="card card1 mt-3">
-          <img className="card-img-top img-fluid cakeimg-home" src="https://flowera.in/uploads/tempDir/dessscM_06_6662e686bf80b-350X400.jpg" alt="Cake" />
+          <img className="card-img-top img-fluid cakeimg-home" src="https://flowera.in/uploads/tempDir/chosscM_06_6662f255c8cb6-350X400.jpg" alt="Cake" />
+          <div className="card-body">
+            <h6 className="card-title text-center "style={{fontSize:14,fontWeight:900}} >Chocolate Truffle</h6>
+          </div>
+        </div>
+        </Link>
+      </div>
+      <div className="col-xl-2 col-lg-4 col-md-4 col-sm-4 mb-4">
+      <Link to="/Cake3" className='text-decoration-none' >
+        <div className="card card1 mt-3">
+          <img className="card-img-top img-fluid cakeimg-home" src="https://flowera.in/uploads/tempDir/2-kg-kitkat-cake-300X300.jpg" alt="Cake" />
+          <div className="card-body">
+            <h6 className="card-title text-center "style={{fontSize:14,fontWeight:900}} >KitKat Cake</h6>
+          </div>
+        </div>
+        </Link>
+      </div>
+      <div className="col-xl-2 col-lg-4 col-md-4 col-sm-4 mb-4">
+      <Link to="/Cake4" className='text-decoration-none' >
+        <div className="card card1 mt-3">
+          <img className="card-img-top img-fluid cakeimg-home" src="https://flowera.in/uploads/tempDir/Designer-football-cake-300X300.jpg" alt="Cake" />
           <div className="card-body">
             <h6 className="card-title text-center "style={{fontSize:14,fontWeight:900}} >Designer Cake</h6>
           </div>
@@ -66,27 +86,7 @@ function Home() {
         </Link>
       </div>
       <div className="col-xl-2 col-lg-4 col-md-4 col-sm-4 mb-4">
-      <Link to="/Homeproduct" className='text-decoration-none' >
-        <div className="card card1 mt-3">
-          <img className="card-img-top img-fluid cakeimg-home" src="https://flowera.in/uploads/tempDir/dessscM_06_6662e686bf80b-350X400.jpg" alt="Cake" />
-          <div className="card-body">
-            <h6 className="card-title text-center "style={{fontSize:14,fontWeight:900}} >Designer Cake</h6>
-          </div>
-        </div>
-        </Link>
-      </div>
-      <div className="col-xl-2 col-lg-4 col-md-4 col-sm-4 mb-4">
-      <Link to="/Homeproduct" className='text-decoration-none' >
-        <div className="card card1 mt-3">
-          <img className="card-img-top img-fluid cakeimg-home" src="https://flowera.in/uploads/tempDir/dessscM_06_6662e686bf80b-350X400.jpg" alt="Cake" />
-          <div className="card-body">
-            <h6 className="card-title text-center "style={{fontSize:14,fontWeight:900}} >Designer Cake</h6>
-          </div>
-        </div>
-        </Link>
-      </div>
-      <div className="col-xl-2 col-lg-4 col-md-4 col-sm-4 mb-4">
-      <Link to="/Homeproduct" className='text-decoration-none' >
+      <Link to="/Cake5" className='text-decoration-none' >
         <div className="card card1 mt-3">
           <img className="card-img-top img-fluid cakeimg-home" src="https://flowera.in/uploads/tempDir/dessscM_06_6662e686bf80b-350X400.jpg" alt="Cake" />
           <div className="card-body">
